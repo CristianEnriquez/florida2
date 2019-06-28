@@ -9,7 +9,8 @@
       
         </div>
 <br>
-<div align="center">  
+
+<div align="center" *ngIf="mostrarRama2 == true">  
 <button type="button" class="btn btn-success" (click)="sendMessage()">
         <strong><i><font face="Arial,Verdana" size=5&gt; color="White" (click)="sera()">Flower and seed-bearing Plants</font></i></strong><br><br>
         
@@ -27,7 +28,7 @@
 </div>
 
 
-<div class="grid-container" >
+<div class="grid-container"  *ngIf="mostrarRama2 == false">
         <div class="grid-item"><img width="95%" height="95%" alt="Angular Logo" src="../../../assets/imagenes/dos/1.png"></div>
         <div class="grid-item"><img width="95%" height="95%" alt="Angular Logo" src="../../../assets/imagenes/dos/2.png"></div>
         <div class="grid-item"><img width="95%" height="95%" alt="Angular Logo" src="../../../assets/imagenes/dos/3.png"></div>  
