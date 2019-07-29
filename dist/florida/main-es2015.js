@@ -41,7 +41,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div  align=\"center\" >  \n<div class=\"contenedor\" align=\"center\">  \n      \n     <br>     \n      \n      <strong><font face=\"Arial,Verdana\" size=6&gt; color=\"Black\" (click)=\"sera()\">Epiphytes of Las Cuevas Research Station, Cayo District, BELIZE</font></strong><br><br>\n      <h3>Bruce K. Holst, Sally Chambers, Antone Jones, David Amaya, Ella Baron, Marvin Paredes, Sayuri Tzul</h3>\n      <br>\n      \n        </div>\n<br>\n<div align=\"center\">  \n<button type=\"button\" class=\"btn btn-success\" (click)=\"sendMessage()\">\n        <strong><i><font face=\"Arial,Verdana\" size=5&gt; color=\"White\" (click)=\"sera()\">Flower and seed-bearing Plants</font></i></strong><br><br>\n        \n    </button>\n\n<br>\n<br>\n<button type=\"button\" class=\"btn btn-success\" (click)=\"sendMessage()\">\n        <strong><i><font face=\"Arial,Verdana\" size=5&gt; color=\"White\" (click)=\"sera()\">Spore-bearing Plants</font></i></strong><br><br>\n        \n    </button>\n    \n</div>\n<br>\n</div>\n\n\n<div class=\"grid-container\" >\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/1.png\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/2.png\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/3.png\"></div>  \n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/4.png\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/5.png\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/6.png\"></div>  \n      \n      </div>\n      <br>\n      <br>"
+module.exports = "<div  align=\"center\" >  \n<div class=\"contenedor\" align=\"center\">  \n      \n     <br>     \n      \n      <strong><font face=\"Arial,Verdana\" size=6&gt; color=\"Black\" (click)=\"sera()\">Epiphytes of Las Cuevas Research Station, Cayo District, BELIZE</font></strong><br><br>\n      <h3>Bruce K. Holst, Sally Chambers, Antone Jones, David Amaya, Ella Baron, Marvin Paredes, Sayuri Tzul</h3>\n      <br>\n      \n        </div>\n<br>\n\n<div align=\"center\" *ngIf=\"mostrarRama2 == true\">  \n<button type=\"button\" class=\"btn btn-success\" (click)=\"sendMessage()\">\n        <strong><i><font face=\"Arial,Verdana\" size=5&gt; color=\"White\" (click)=\"sera()\">Flower and seed-bearing Plants</font></i></strong><br><br>\n        \n    </button>\n\n<br>\n<br>\n<button type=\"button\" class=\"btn btn-success\" (click)=\"sendMessage()\">\n        <strong><i><font face=\"Arial,Verdana\" size=5&gt; color=\"White\" (click)=\"sera()\">Spore-bearing Plants</font></i></strong><br><br>\n        \n    </button>\n    \n</div>\n<br>\n</div>\n\n\n<div class=\"grid-container\"  *ngIf=\"mostrarRama2 == false\">\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/1.jpg\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/2.jpg\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/3.jpg\"></div>  \n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/4.jpg\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/5.jpg\"></div>\n        <div class=\"grid-item\"><img width=\"95%\" height=\"95%\" alt=\"Angular Logo\" src=\"../../../assets/imagenes/dos/6.jpg\"></div>  \n      \n      </div>\n      <br>\n      <br>"
 
 /***/ }),
 
@@ -162,8 +162,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let Rama1Component = class Rama1Component {
-    constructor() { }
+    constructor() {
+        this.mostrarRama2 = true;
+    }
     ngOnInit() {
+    }
+    sera() {
+        if (this.mostrarRama2 == false) {
+            this.mostrarRama2 = true;
+        }
+        else {
+            this.mostrarRama2 = false;
+        }
     }
 };
 Rama1Component = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
