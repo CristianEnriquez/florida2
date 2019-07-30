@@ -15,4 +15,10 @@ export class AppComponent {
             this.mostrarRama=false
           }
   }
+  refrescar(){
+    window.location.reload(false); 
+  }
+  sera2(){
+    alert("only Epiphytes of Las Cuevas Research Station, Cayo District, Belize is working")
+  }
 }
