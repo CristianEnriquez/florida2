@@ -1,0 +1,75 @@
+
+  <div class="container">
+        <!--Encabezado-->
+         <div class="row">
+            <div class="col-sm-12"  >
+                  <strong><font face="Arial,Verdana" size=5.5&gt; color="Black" (click)="sera()">Epiphytes of Las Cuevas Research Station, Cayo District, BELIZE</font></strong><br><br>
+                  <h4>Bruce K. Holst, Sally Chambers, Antone Jones, David Amaya, Ella Baron, Marvin Paredes, Sayuri Tzul</h4>
+            </div>
+          
+          </div>
+          <!--Botones-->
+  <div align="center" >
+                  <br>
+          <div class="row" style="justify-content: center;" >
+                  <button type="button" class="btn btn-success" (click)="boton1()">
+                          <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Flower and spore-bearing Plants</font></i></strong><br><br>
+                          
+                      </button>
+                </div>
+                <br>
+          <div class="row" style="justify-content: center;" >
+                  <button type="button" class="btn btn-success" (click)="boton2()">
+                          <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Spore-bearing Plants</font></i></strong><br><br>
+                          
+                      </button>
+                </div>
+                <br>
+  </div>
+  
+  <!--Bucle-->
+  
+  <div class="grid-container" style="justify-content: center;"  *ngIf="bot1 == true">
+          <div style="justify-items: center" class="grid-item" *ngFor="let message of messages">
+          <div class="row" style="justify-content: center;" width="100%"  height="100%">
+                  
+                          <img width="70%"  height="60%"  alt="Angular Logo" src={{message.imagen}}>
+                     
+                  
+          </div>
+          <div class="container"  style="justify-content: center; width: 125px"  >
+                  <div class="row"  >
+                 <i><font face="Arial,Verdana" size=4&gt; color="Black" >{{message.nombre}}</font></i>
+              </div>
+              </div>
+          </div>
+  </div>
+  
+  
+  <!--Pie de pagina-->
+  
+        <div class="row">
+                <div class="col-sm-4"  style="background-color:#aaa">
+                  <h1>Columna 1</h1> 
+                  <p>Esto es una prueba de bootstrap.</p>
+                </div>
+                <div class="col-sm-4"  style="background-color:#bbb">
+                  <h1>Columna 2</h1> 
+                  <p>Esto es una prueba de bootstrap.</p>
+                </div>
+                <div class="col-sm-4"  style="background-color:#ccc">
+                  <h1>Columna 3</h1> 
+                  <p>Esto es una prueba de bootstrap.</p>
+                </div>
+              </div>
+
+
+
+
+
+
+        <hr>
+    
+
+    
+      </div> 

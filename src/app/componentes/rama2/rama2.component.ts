@@ -1,17 +1,17 @@
+
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
 import { Observable } from 'rxjs'
 @Component({
-  selector: 'app-rama1',
-  templateUrl: './rama1.component.html',
-  styleUrls: ['./rama1.component.css']
+  selector: 'app-rama2',
+  templateUrl: './rama2.component.html',
+  styleUrls: ['./rama2.component.css']
 })
-
-export class Rama1Component implements OnInit {
+export class Rama2Component implements OnInit {
   ref: AngularFireStorageReference;
   items: Observable<any[]>;
-  mostrarRama1 = true;
+
   bot1= false;
   bot2= false;
   messages = [];
@@ -19,27 +19,11 @@ export class Rama1Component implements OnInit {
   
   constructor(public db: AngularFireDatabase,public stor: AngularFireStorage) {
     const id = Math.random().toString(36).substring(2);
- 
-
-
-  
-  
-
-
-   }
+    }
 
   ngOnInit() {
   }
-  sera(parametro: string){
-   
-    if (this.mostrarRama1==false){
-      this.mostrarRama1=true;
  
-          }else{
-            this.mostrarRama1=false;
-       
-          }
-  }
   boton1(){
     console.log("boton1")
     if (this.bot1==true){
@@ -50,9 +34,7 @@ export class Rama1Component implements OnInit {
             this.bot2=false;
           }
        
-          
-
- this.db.list('/1149').valueChanges().subscribe((items) =>
+  this.db.list('/1149').valueChanges().subscribe((items) =>
  { 
 
   this.messages = [];
